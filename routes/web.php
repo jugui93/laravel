@@ -19,4 +19,4 @@ Route::controller(PageController::class)->group( function () {
     Route::get('/',           'home')->name('home');
     Route::get('blog',        'blog')->name('home');
     Route::get('blog/{slug}', 'post')->name('home');
-})
+});
