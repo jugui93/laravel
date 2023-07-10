@@ -17,11 +17,9 @@ class PostController extends Controller
     {
         return view('posts.create');
     }
-    public function index()
+    public function edit(Post $post)
     {
-        return view('posts.index',[
-            'posts'=>Post::latest()->paginate()
-        ]);
+        return view('posts.edit',['post'=>$post]);
     }
     public function destroy(Post $post)
     {
